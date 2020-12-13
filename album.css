@@ -14,6 +14,10 @@
   }
 }
 
+hr{
+    border: 1px dashed #add8e6;
+}
+
 .navbar h3{
     color: white;
     

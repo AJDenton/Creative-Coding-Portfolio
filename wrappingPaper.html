@@ -38,7 +38,7 @@
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Home</a>
+        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,7 +46,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Understanding Colour Modes and Loops</h1>
+                        <h1>Wrapping Paper</h1>
                         <h3>Nov 2020</h3>
                     </div>
                 </div>
@@ -61,6 +61,7 @@
                     <div class="col-md-7">
                         <h3>Canvas</h3>
                         <iframe src="js/shape-pattern-AJDenton-master/Exercise08-WrappingPaper/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+                        <img src="mainImages/chocolatebar.JPG" height="600px" width="600px">
                     </div>
                     <div class="col-md-5">
                         <h3>Description</h3>
@@ -74,13 +75,12 @@
                             When a random number is outputted (randColor), another random function takes place, in which any value that is equal to or less than 0.3 will make the fill of the shape red. If the output does not coincide with this statement, the outputted fill will be white.
                         </p>
                         <h3>Drawing Context</h3>
-                        <p>The main aim for this assignment was to create an image with depth using shadows. In p5, there are not many options to do this outside of creating more shapes directly.</p>
-                    </div>
-                    <div class="row whiteText">
-                            drawingContext is one option that allows for shadow creation and manipulation. It can use shadow offsets and blur amounts that can be set and drawn by calling the function within the draw function.
-                            <br><br>
-                            I felt this function was easy to use, but did to output the visuals I was hoping for, so instead 'createGraphics' was used.
-                        
+                        <p>The main aim for this assignment was to create an image with depth using shadows. In p5, there are not many options to do this outside of creating more shapes directly.
+                        <br><br>
+                        drawingContext is one option that allows for shadow creation and manipulation. It can use shadow offsets and blur amounts that can be set and drawn by calling the function within the draw function.
+                        <br><br>
+                        I felt this function was easy to use, but did to output the visuals I was hoping for, so instead 'createGraphics' was used.</p>
+
                         <h3>Create Graphics</h3>
                         <p>createGraphics() is a method in p5 that allows for new graphics to be rendered onto the canvas. It is like creating a second canvas on top of the original canvas.
                             <br><br>
@@ -93,7 +93,13 @@
                             Once the createGraphic function and shapes were created, they were simply applied to the loop previously created to draw objects across the canvas.
                             <br><br>
                             The createGraphics function created in this piece also takes in a parameter for the shapes color, so that when the function is called in the draw function, a color can be set.
+                            <br><br>
                         </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+
                     </div>
                 </div>
             </div>
@@ -108,8 +114,7 @@
             <p class="float-right">
                 <a href="#">Back to top</a>
             </p>
-            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
