@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Understanding Colour Modes and Loops</h2>
-                        <h3>Sep 30 2020</h3>
+                        <h1>Rotating Rectangles</h1>
+                        <h3>Oct 2020</h3>
                     </div>
                 </div>
             </div>
@@ -58,16 +58,22 @@
             <div class="container">
 
                 <div class="row whiteText">
-                    <div class="col-md-9">
+                    <div class="col-md-6">
                         <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
+                        <iframe src="js/shape-pattern-AJDenton-master/Exercise02-RotateRectangle/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 500px;" height="100%" width="100%"></iframe>
                     </div>
-                    <div class="col-md-3 ">
+                    <div class="col-md-6">
                         <h3>Description</h3>
-                        <p>This task involved creating a grid using a set of for loops, each of which continuously creates a rect according to the positions of 'gridX' and 'gridY'. These rect's positions are also defined according to the stepX and stepY values.
-                            <br><br>
-                            This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
-                        </p>
+                        <p>In this exercise, we learned about atan2, using it to rotate rect objects towards the mouse position.</p>
+
+                        <h3>Atan2 and Translation</h3>
+                        <p>'atan2()' is a function in p5 that calculates the angle from a specified position to an origin. This can be used to program mouse interactivity.<br><br>
+
+                        The atan2 function takes 2 parameters, y and x. In this piece, the parameter for y is 'mouseY - transY' while the parameter for x is 'mouseX - transX'. In this case, we use translations to replace a shape's origin point so that the shapes may all rotate separately from one another.<br><br>
+
+                        In doing so, we used atan2 to calculate the angle between a rect shape drawn on the canvas, to the mouse position.<br><br>
+
+                        In this example, there appears to be an error where the first rect should be drawn.</p>
                     </div>
                 </div>
             </div>

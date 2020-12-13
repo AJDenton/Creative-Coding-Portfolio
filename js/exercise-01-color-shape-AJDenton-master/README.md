@@ -69,7 +69,7 @@ The lerpColor function takes 3 parameters, the beginning color, the ending color
 In this exercise, I used several different shapes and ranges to experiment with the lerpColor function.
 
 ---
-##Exercise 07 - Interpolated Spiral - FINAL
+## Exercise 07 - Interpolated Spiral - FINAL
 
 This task was set in order to compose a piece using lerpColor. Interactivity was also required.
 

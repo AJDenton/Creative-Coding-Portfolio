@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Understanding Colour Modes and Loops</h2>
-                        <h3>Sep 30 2020</h3>
+                        <h2>Understanding Atan2 and Size</h2>
+                        <h3>Oct 2020</h3>
                     </div>
                 </div>
             </div>
@@ -58,15 +58,23 @@
             <div class="container">
 
                 <div class="row whiteText">
-                    <div class="col-md-9">
+                    <div class="col-md-7">
                         <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
+                        <iframe src="js/shape-pattern-AJDenton-master/Exercise04-UnderstandingatanandSize/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
                     </div>
-                    <div class="col-md-3 ">
+                    <div class="col-md-5">
                         <h3>Description</h3>
-                        <p>This task involved creating a grid using a set of for loops, each of which continuously creates a rect according to the positions of 'gridX' and 'gridY'. These rect's positions are also defined according to the stepX and stepY values.
+                        <p>This exercise taskes the same theory of using atan2 to rotate objects on the canvas, however there is size manipulation applied using the dist() function and the map() function.
+                        </p>
+                        <h3>Dist()</h3>
+                        <p>The dist function calculates the distance between two points on a canvas. In this example, it takes the parameters of the mouse position (mouseX and mouseY) as well as the transformation positions (transX and transY).
                             <br><br>
-                            This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
+                            This will allow the distance between the mouse position and a specific shape to be measured, so that change can take place when the distance changes.
+                        </p>
+                        <h3>Mapping</h3>
+                        <p>The mapping function is used to re-map a number from one range to another. In this piece, mapping is used alongside dist() in order to manipulate the size of shapes as the dist() value reduces. In simple terms, as the mouse gets closer to an object, the object size will increase. As the mouse moves away from an object, the size decreases.
+                            <br><br>
+                            This was applied to each shape drawn in the canvas, each of wish has it's own transformation so that each origin point is different.
                         </p>
                     </div>
                 </div>

@@ -64,10 +64,7 @@ Each line is the same size, so the resulting image shows a randomly generated ma
 ---
 ## Exercise 06 - atan2 Random() Composition
 ### *Description*
-This exercise was done in order for the class to create individual pieces using random generation.
-
-### *Composition*
-My piece involved the same theory of random generation, however instead of lines, I chose to use arcs and ellipses. I also chose to adjust the radians of the arcs depending on the random number output.
+This exercise was done in order for the class to create individual pieces using random generation. My piece involved the same theory of random generation, however instead of lines, I chose to use arcs and ellipses. I also chose to adjust the radians of the arcs depending on the random number output.
 
 ### *Random*
 This piece uses an if else statement that determines a number between 0 and 3. In each output, an arc is drawn and set to a specific rotation and arc size. The arc uses the RADIANS angleMode, so this was used to calculate the degrees in which an arc is drawn.

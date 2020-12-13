@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Understanding Colour Modes and Loops</h2>
-                        <h3>Sep 30 2020</h3>
+                        <h1>Mouse Interactivity and keyPressed</h1>
+                        <h3>Sep 2020</h3>
                     </div>
                 </div>
             </div>
@@ -60,14 +60,19 @@
                 <div class="row whiteText">
                     <div class="col-md-9">
                         <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
+                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise02-MouseInteractivityandkeyPressedFunction/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
                     </div>
                     <div class="col-md-3 ">
                         <h3>Description</h3>
-                        <p>This task involved creating a grid using a set of for loops, each of which continuously creates a rect according to the positions of 'gridX' and 'gridY'. These rect's positions are also defined according to the stepX and stepY values.
+                        <p>In this task, we used the mouseX and mouseY functions to allow the computer to read the location of the mouse on the canvas. This position is found by reading the X and Y axis.
                             <br><br>
-                            This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
+                        This program is interactive, but is not working correctly.
                         </p>
+                        
+                        <h3>Key Pressed Function</h3>
+                        <p>This function allows the user to interact with the canvas by pressing a button. The keyPressed() function is an event listener, which means that is continuously listens for an event to take place while the program is running. In this task, we used the keyPressed function to listen for the 's'/'S' key to be initialized on the keyboard. When this happens, the 'saveCanvas' function is initiated, which will save a capture of the canvas and download it to the PC.
+                            <br><br>
+                        In this case, the saveCanvas function featured the 'gd.timestamp()' as the first parameter. This will export the image with a timestamp of the keyPressed function happening.</p>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Creative Coding Portfolio · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="album.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="index.html">Home</a>
+    </nav>
+    <main role="main">
+
+        <section class="jumbotron">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Understanding Colour Modes and Loops</h1>
+                        <h3>Nov 2020</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <div class="album py-5 bg-dark">
+            <div class="container">
+
+                <div class="row whiteText">
+                    <div class="col-md-7">
+                        <h3>Canvas</h3>
+                        <iframe src="js/shape-pattern-AJDenton-master/Exercise08-WrappingPaper/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+                    </div>
+                    <div class="col-md-5">
+                        <h3>Description</h3>
+                        <p>For this assignment, we needed to produce a design using the methods previously taught to create wrapping paper.
+                            <br><br>
+                            In doing so, references were required, as well as knowledge used previously applied to the code.
+                        </p>
+                        <h3>Random Generation</h3>
+                        <p>The same theory applies to this piece as previously used compositions. This piece uses random generation (randShape) for color and shape selection. There are two shapes in total, which are technically identical, however they go in opposite directions. The random function applied to them to made to output a random value that will determine the shape to be drawn.
+                            <br><br>
+                            When a random number is outputted (randColor), another random function takes place, in which any value that is equal to or less than 0.3 will make the fill of the shape red. If the output does not coincide with this statement, the outputted fill will be white.
+                        </p>
+                        <h3>Drawing Context</h3>
+                        <p>The main aim for this assignment was to create an image with depth using shadows. In p5, there are not many options to do this outside of creating more shapes directly.</p>
+                    </div>
+                    <div class="row whiteText">
+                            drawingContext is one option that allows for shadow creation and manipulation. It can use shadow offsets and blur amounts that can be set and drawn by calling the function within the draw function.
+                            <br><br>
+                            I felt this function was easy to use, but did to output the visuals I was hoping for, so instead 'createGraphics' was used.
+                        
+                        <h3>Create Graphics</h3>
+                        <p>createGraphics() is a method in p5 that allows for new graphics to be rendered onto the canvas. It is like creating a second canvas on top of the original canvas.
+                            <br><br>
+                            I used this method to create a function called 'makeGraphic', in which each shape is drawn, then the shadow is drawn using almost identical parameters. This creates 2 of the same shape, however each can be manipulated to differ. In this piece, the shadow shape is simply set to black, with a lowered opacity and a filter of BLUR applied.
+                            <br><br>
+                            P5 filters simply apply an image filter to an image created. There is a multitude to utilize, including THRESHOLD, GRAY, OPAQUE, INVERT and BLUR.
+                            <br><br>
+                            This piece uses the BLUR filter, which takes in a parameter so that the blur can be adjusted to a bigger or smaller degree. This filter can cause slow loading issues when the index page is ran.
+                            <br><br>
+                            Once the createGraphic function and shapes were created, they were simply applied to the loop previously created to draw objects across the canvas.
+                            <br><br>
+                            The createGraphics function created in this piece also takes in a parameter for the shapes color, so that when the function is called in the draw function, a color can be set.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <footer class="text-muted">
+        <div class="container">
+
+            <p class="float-right">
+                <a href="#">Back to top</a>
+            </p>
+            <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+            <p>New to Bootstrap? <a href="https://getbootstrap.com/">Visit the homepage</a> or read our <a href="../getting-started/introduction/">getting started guide</a>.</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')
+
+    </script>
+    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+
+</html>
