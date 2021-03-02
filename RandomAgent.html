@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Lerp Rotation Composition</h1>
-                        <h3>Sep 2020</h3>
+                        <h1>Random Agent</h1>
+                        <h3>Feb 2020</h3>
                     </div>
                 </div>
             </div>
@@ -60,47 +60,61 @@
                 <div class="row whiteText">
                     <div class="col-md-8">
                         <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise07-InterpolatedColorWheel/index.html" frameborder="0" scrolling="no" style="height: 750px; width: 750px;" height="100%" width="100%"></iframe>
+                        <iframe src="js/Semester2/RandomAgent/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700;" height="100%" width="100%"></iframe>
                     </div>
+                
+                
                     <div class="col-md-4">
                         <h3>Description</h3>
-                        <p>This task was set in order to compose a piece using lerpColor. Interactivity was also required.
-                            <br><br>
-                            I chose to create a spiral that could have interactive colors, rotations and a stroke. The aim was so produce something that could showcase a vortex of growing colors. The end result became an interesting and fun composition that could be used to create mosaics and spirals.
-                            <br><br>
-                            Again, I used sliders in doing this task. I used these as an Interactivity option due to the ease of use that came with it. The sliders were applied to the start color and the end color, so that the user could play with different color spectrums. The sliders were also applied to the rotations of the shapes, stemming from the center of the canvas. Finally, the last slider controlled the stroke weight of the drawn shapes. This offered some interesting mosaic styled manipulations.
-                            <br><br>
-                            I used mapping in this task for the number of shapes on the canvas. These shapes were mapped to mouseY, so that as the cursor moves down the canvas, the number of shapes increase.
+                        <p>This task uses a combination of mapping and randomness in order to create a randomly generating pattern.
+                            <br>
+                            This code uses random ranges to move a single ellipse shape on both the X and Y axis. Firstly the direction is established, then the movement is established using the direction and stepSize.
+                            <br>
+                            <code>let directionX = round(random(-1,1));
+                            <br>
+                            let directionY = round(random(-1,1));
+                            <br>
+                            let moveX = directionX * stepSize;<br>
+                            let moveY = directionY * stepSize;</code>
+                            <br>
+                            By doing this, the ellipse is able to move horizontally, vertically and diagonally.
+                            <br>
+                            
+                            This is wrapped inside a for loop that uses the "speed" variable. The speed is mapped to the mouseX position on the canvas.<br>
+                            <code>let speed = map(mouseX,0,width,2,40);</code>
+                            <br>
+                            This mapped variable will determine how fast the ellipse shape travels around the canvas.
+                            
                         </p>
                     </div>
-                    </div>
+                </div>
                 <div class="row whiteText">
                         <div class="col-md-12">
                             <h3>Example Outputs</h3>
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/1.png">
-                        <img src="mainImages/lerpRotation/1.png" width="600" height="600">
+                      <a target="_blank" href="mainImages/RandomAgent/1.png">
+                        <img src="mainImages/RandomAgent/1.png" width="600" height="600">
                       </a>
                     </div>
 
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/2.png">
-                        <img src="mainImages/lerpRotation/2.png" width="600" height="600">
+                      <a target="_blank" href="mainImages/RandomAgent/2.png">
+                        <img src="mainImages/RandomAgent/2.png" width="600" height="600">
                       </a>
                     </div>
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/3.png">
-                        <img src="mainImages/lerpRotation/3.png" width="600" height="600">
+                      <a target="_blank" href="mainImages/RandomAgent/3.png">
+                        <img src="mainImages/RandomAgent/3.png" width="600" height="600">
                       </a>
                     </div>
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/4.png">
-                        <img src="mainImages/lerpRotation/4.png" width="600" height="600">
+                      <a target="_blank" href="mainImages/RandomAgent/4.png">
+                        <img src="mainImages/RandomAgent/4.png" width="600" height="600">
                       </a>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     </main>
 
@@ -122,5 +136,5 @@
 
     </script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+
 </html>
