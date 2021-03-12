@@ -1,4 +1,4 @@
-let cWidth = 1000;
+let cWidth = 700;
 let stepSize = 1;
 let vPoints = [];
 let numOfSeg = 5;

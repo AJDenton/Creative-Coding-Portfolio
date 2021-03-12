@@ -58,24 +58,41 @@
             <div class="container">
 
                 <div class="row whiteText">
-                    <div class="col-md-6">
-                        <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise04-Translations/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 500px;" height="100%" width="100%"></iframe>
+                    <div class="col-md-12">
+                        <!--<h3>Canvas</h3>-->
+                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise04-Translations/index.html" frameborder="0" scrolling="no" style="height: 800px; width: 800px;" height="100%" width="100%"></iframe>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row whiteText">
+                    <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>In this exercise we used the mapping function to adjust the number of segments in the TRIANGLE_FAN. In doing so, the program is interactive, as the number of segments value increases and decreases according to the position of mouseX(*numOfseg = map(mouseX,0,width,10,40);*).</p>
-                        
+                        <p>In this exercise we used the mapping function to adjust the number of segments in the TRIANGLE_FAN. In doing so, the program is interactive, as the number of segments value increases and decreases according to the position of mouseX.</p>
+                                            
                         <h3>Mapping</h3>
                         <p>Mapping is a p5 function that re-maps the range of numbers to a specified range.</p>
+                        
+                        <code>numOfseg = map(mouseX,0,width,10,40);</code><br><br> 
                         
                         <h3>Push and Pop</h3>
                         <p>The push() and pop() functions allow for specified transformations that will not effect any other transformations outside the section of code.<br><br>
 
                         In this task, we used push and pop to adjust the co-ordinate system using the translate() function. This means that we can make the origin point for the triangle_fan shape 0,0 (*using beginShape(), vertex() and endShape()*) and be able to rotate the shape around itself. This will not effect the co-ordinate systems of objects created outside the push and pop functions.</p>
                         
+                        <code>push();<br>
+                            translate(250,250);<br>
+                            rotate(45);<br> beginShape(TRIANGLE_FAN);<br>  vertex(0,0);<br>  
+                            for(let a=0; a&lt;=360; a+=stepAngle){<br> 
+                            let vx = (r * cos(a));<br> 
+                            let vy = (r * sin(a));<br> 
+                            fill(a,100,100); vertex(vx,vy);<br> 
+                            }<br> 
+                            endShape();<br> 
+                            pop(); }</code><br> <br> 
+                        
                         <h3>Translate Function</h3>
                         <p>The translate() function allows for displacement of the co-ordinate system for a specific set of code. This can be done in order to fix a shape's rotations, so that they are not rotating around a separate origin point.</p>
+                        
+                        <code>translate(250,250);</code>
                     </div>
                 </div>
             </div>

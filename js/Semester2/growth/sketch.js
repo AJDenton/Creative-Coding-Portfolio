@@ -9,7 +9,7 @@ let col;
 
 
 function setup() {
-createCanvas(1000, 1000);
+createCanvas(800, 800);
 //Pushing the root vector value into the array
 points.push(createVector(width/2, height/2));
 //Setting the destination to the first array value
@@ -57,7 +57,7 @@ for (let i = 0; i < points.length; i++) {
 //This function will spawn the shape in the canvas and move it according to which array vector is the closest distance.
 function moveShape(){
     //draw a shape using the random canvas position and the shapeSizes, this shape will be moved towards the closest shape
-    //point(shapeToMove.x, shapeToMove.y);
+    point(shapeToMove.x, shapeToMove.y);
     //Use p5.Vector.lerp, which will move the shapeToMove towards the destination (the closest/lowest value in the array)
     shapeToMove = p5.Vector.lerp(shapeToMove, destination, amount);
     //Add to the amount each time

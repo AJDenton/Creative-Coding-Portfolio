@@ -15,6 +15,7 @@ render(){
     // }
 
   //These draw through every line using co-ordinates stored within the array
+    beginShape();
     for(let i = 0; i<this.vPoints.length - 1; i++){
       stroke(255 , 50);
       strokeWeight(2);

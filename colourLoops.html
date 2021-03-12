@@ -58,15 +58,27 @@
             <div class="container">
 
                 <div class="row whiteText">
-                    <div class="col-md-9">
-                        <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
+                    <div class="col-md-12">
+                        
+                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
                     </div>
-                    <div class="col-md-3 ">
+                </div>
+                <div class="row whiteText">
+                    <div class="col-md-12 ">
                         <h3>Description</h3>
                         <p>This task involved creating a grid using a set of for loops, each of which continuously creates a rect according to the positions of 'gridX' and 'gridY'. These rect's positions are also defined according to the stepX and stepY values.
                             <br><br>
-                            This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
+                            <code>  let stepX = 25;<br>
+                                let stepY = 25;<br>
+                                for(let gridY=0; gridY&lt;height; gridY=gridY+stepY){<br>
+                                for(let gridX=0; gridX&lt;width; gridX=gridX+stepX){<br> 
+                                fill(gridX, gridY, 100);<br>
+                                rect(gridX, gridY, 25, 25); <br>
+                                } } </code><br><br>
+                        This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
+                        <br>
+                        <code>colorMode(HSB, width, height, 100);</code>
+                        
                         </p>
                     </div>
                 </div>

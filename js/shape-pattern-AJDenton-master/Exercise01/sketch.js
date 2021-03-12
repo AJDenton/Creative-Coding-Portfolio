@@ -3,7 +3,7 @@ let stepAngle;
 let lineSize;
 
 function setup() {
-  createCanvas(500, 500);
+  createCanvas(600, 600);
   colorMode(HSB,360,100,100);
   background(0);
   angleMode(RADIANS);

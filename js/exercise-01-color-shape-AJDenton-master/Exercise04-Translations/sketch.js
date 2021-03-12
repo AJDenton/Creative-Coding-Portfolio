@@ -4,7 +4,7 @@ let stepAngle;
 let r;
 
 function setup(){
-  createCanvas(500,500);
+  createCanvas(800,800);
   //set angle mode to degrees
   angleMode(DEGREES);
   //set color mode to hue, saturation and brightness
@@ -19,11 +19,11 @@ function draw(){
   //stepAngle is equal to the full degrees of a circle divided by the number of segments.
   stepAngle = 360/numOfSeg;
   //radius, set to 150.
-  r = 150;
+  r = 250;
 //push. Anything inside the push and pop is like it's own instance.
   push();
 
-  translate(250,250);
+  translate(width/2,width/2);
   rotate(45);
   //background(0);
   //begin shape of triangle fan with starting point(vertex)

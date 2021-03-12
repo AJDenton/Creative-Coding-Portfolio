@@ -10,7 +10,7 @@ let sliderBri;
 let sliderAlpha;
 
 function setup(){
-  createCanvas(600,500);
+  createCanvas(700,600);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100, 100);
   stroke(255);
@@ -38,23 +38,23 @@ function draw(){
 
   //Placement of sliders with text
   //HUE
-  text('Hue', 480, 50);
+  text('Hue', 580, 50);
   text(hue, 550, 50);
-  sliderHue.position(480, 60);
+  sliderHue.position(580, 60);
 
   //SATURATION
-  text('Saturation', 480, 90);
+  text('Saturation', 580, 90);
   text(sat, 550, 90);
-  sliderSat.position(480, 100);
+  sliderSat.position(580, 100);
 
   //BRIGHTNESS
-  text('Brightness', 480, 130);
+  text('Brightness', 580, 130);
   text(bri, 550, 130);
-  sliderBri.position(480, 140);
+  sliderBri.position(580, 140);
   //ALPHA
-  text('Alpha', 480, 170);
+  text('Alpha', 580, 170);
   text(alp, 550, 170);
-  sliderAlpha.position(480, 180);
+  sliderAlpha.position(580, 180);
 
   //First TRIANGLE_FAN
   push();

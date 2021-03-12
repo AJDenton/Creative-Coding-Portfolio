@@ -4,7 +4,7 @@ let startCol;
 let endCol;
 
 function setup(){
-  createCanvas(500,500);
+  createCanvas(600,600);
   background(0);
   colorMode(HSB, 360, 100, 100);
   rectMode(CENTER);

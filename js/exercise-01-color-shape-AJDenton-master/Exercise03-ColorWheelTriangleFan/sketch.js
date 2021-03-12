@@ -3,7 +3,7 @@ let stepAngle = 360/numOfSeg;
 let r = 200;
 
 function setup(){
-  createCanvas(500,500);
+  createCanvas(600,600);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100);
   noStroke();
@@ -15,15 +15,14 @@ function draw(){
   fill(255,0,0);
 
   beginShape(TRIANGLE_FAN);
-  vertex(250,250);
+  vertex(width/2,height/2);
       for(let a=0; a<=360; a+=stepAngle){
-        let vx = (r * cos(a)) + 250;
-        let vy = (r * sin(a)) + 250;
+        let vx = (r * cos(a)) + 300;
+        let vy = (r * sin(a)) + 300;
         fill(a,100,100);
         vertex(vx,vy);
       }
       endShape();
-
     }
 
   function keyPressed(){

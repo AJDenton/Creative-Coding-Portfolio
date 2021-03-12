@@ -58,23 +58,51 @@
             <div class="container">
 
                 <div class="row whiteText">
-                    <div class="col-md-9">
-                        <h3>Canvas</h3>
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise02-MouseInteractivityandkeyPressedFunction/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
-                    </div>
-                    <div class="col-md-3 ">
+                    <div class="col-md-12">
+                       
+                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise02-MouseInteractivityandkeyPressedFunction/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
+                    </div></div>
+                <div class="row whiteText">
+                    <div class="col-md-12 ">
                         <h3>Description</h3>
-                        <p>In this task, we used the mouseX and mouseY functions to allow the computer to read the location of the mouse on the canvas. This position is found by reading the X and Y axis.
-                            <br><br>
-                        This program is interactive, but is not working correctly.
-                        </p>
+                        <p>In this task, we used the mouseX and mouseY functions to allow the computer to read the location of the mouse on the canvas. This position is found by reading the X and Y axis. This composition relies on the position of mouseX and mouseY to determind the color drawn on the canvas.
+                        <br><br>
+                            
+                        <code>for(let gridY=0; gridY&lt;height; gridY=gridY+stepY){<br>
+                        for(let gridX=0; gridX&lt;width; gridX=gridX+stepX){<br>
+                        fill(mouseX, mouseY, 100);<br>
+                        rect(gridX, mouseY, 25, 25);<br> } }
+                        </code></p>
+                        
                         
                         <h3>Key Pressed Function</h3>
                         <p>This function allows the user to interact with the canvas by pressing a button. The keyPressed() function is an event listener, which means that is continuously listens for an event to take place while the program is running. In this task, we used the keyPressed function to listen for the 's'/'S' key to be initialized on the keyboard. When this happens, the 'saveCanvas' function is initiated, which will save a capture of the canvas and download it to the PC.
                             <br><br>
                         In this case, the saveCanvas function featured the 'gd.timestamp()' as the first parameter. This will export the image with a timestamp of the keyPressed function happening.</p>
                     </div>
+                        
                 </div>
+                <div class="row whiteText">
+                        <div class="col-md-12">
+                            <h3>Example Outputs</h3>
+                    <div class="gallery">
+                      <a target="_blank" href="mainImages/MouseInteractivityandKeyPressed/1.png">
+                        <img src="mainImages/MouseInteractivityandKeyPressed/1.png" width="600" height="600">
+                      </a>
+                    </div>
+
+                    <div class="gallery">
+                      <a target="_blank" href="mainImages/MouseInteractivityandKeyPressed/2.png">
+                        <img src="mainImages/MouseInteractivityandKeyPressed/2.png" width="600" height="600">
+                      </a>
+                    </div>
+                    <div class="gallery">
+                      <a target="_blank" href="mainImages/MouseInteractivityandKeyPressed/3.png">
+                        <img src="mainImages/MouseInteractivityandKeyPressed/3.png" width="600" height="600">
+                      </a>
+                    </div>
+                </div>
+            </div>
             </div>
         </div>
     </main>

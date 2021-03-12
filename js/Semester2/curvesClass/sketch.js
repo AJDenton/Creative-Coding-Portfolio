@@ -1,8 +1,8 @@
-let cWidth = 1000;
+let cWidth = 800;
 let stepSize = 1;
 let vPoints = [];
 let numOfSeg = 15;
-let r = 250;
+let r = 150;
 let pointRadius = 10;
 
 function setup() {

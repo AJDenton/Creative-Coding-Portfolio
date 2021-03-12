@@ -10,7 +10,7 @@ let sliderEndHue;
 let sliderStroke;
 
 function setup(){
-  createCanvas(700,700);
+  createCanvas(800,800);
   angleMode(DEGREES);
   colorMode(HSB, 360, 100, 100, 100);
   background(0);
