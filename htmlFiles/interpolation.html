@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Curves Function</h1>
-                        <h3>Feb 2020</h3>
+                        <h1>Interpolation</h1>
+                        <h3>Sep 2020</h3>
                     </div>
                 </div>
             </div>
@@ -59,18 +59,23 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-
-                        <iframe src="js/Semester2/curvesFunction/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
+                        <iframe src="../js/exercise-01-color-shape-AJDenton-master/Exercise06-InterpolationwithlerpColor/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 500px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>
-                            
-                            
-                            
-                            
-                            
+                        <p>This exercise was about learning to use and understand the p5 function 'lerpColor'.
+                            <br><br>
+                            In this example, we drew a series of rectangles that could progressively change color from the start to the end.
+                            <br><br>
+                            <code>let startColor = color(360,50,100);<br>
+                            let endColor = color(200,50,100);</code><br><br>
+                            The lerpColor function takes 3 parameters, the beginning color, the ending color, and a number between 0 and 1.
+                            <br><br>
+                            In this exercise, I used several different shapes and ranges to experiment with the lerpColor function.<br>
+                            Rectangle Example;<br>
+                            <code>for(let i = 0; i &lt; 10; i++){<br> fill(lerpColor(startColor,endColor,i/10));<br>
+                                rect(50 * i,100,50,50);<br> }</code>
                         </p>
                     </div>
                 </div>
@@ -87,7 +92,6 @@
                 <a href="#">Back to top</a>
             </p>
             <p>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -96,5 +100,5 @@
 
     </script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
+    </body>
 </html>

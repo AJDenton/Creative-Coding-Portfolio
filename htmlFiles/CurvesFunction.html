@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Triangle Fan Stroke</h1>
-                        <h3>Oct 2020</h3>
+                        <h1>Curves Function</h1>
+                        <h3>Feb 2020</h3>
                     </div>
                 </div>
             </div>
@@ -59,12 +59,37 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/shape-pattern-AJDenton-master/Exercise01/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+
+                        <iframe src="../js/Semester2/curvesFunction/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>This task uses the triangle fan with only a stroke to create the pattern shown. It also uses mapping to increase and decrease the number of segments/lines as the mouse position moves along the x axis of the canvas.
+                        <p>This task was set to learn about the curveVertex feature in p5js. The curveVertex function in p5js is done by replacing the "vertex" inside a beginShape() and endShape(). This will change the vertex to a smoother curve.
+                            <br><br>
+                            The curveVertex is controlled ultimately by 3 points. One main point is applied to the middle of the shape, while two other points act as "control points" for curve manipulation.
+                            
+                            <br><br>
+                            <code>
+                                  beginShape();<br>
+    for(let i = 0; i&#x3C;vPoints.length - 1; i++){<br>
+      stroke(255);<br>
+      strokeWeight(2);<br>
+        noFill();<br>
+      curveVertex(vPoints[i].x, vPoints[i].y);<br>
+    }<br>
+    endShape();
+                            </code>
+                            <br><br>
+                            In this task, we used sine and cosine calculations to determine the angles and points within a circular shape. These calculations are used to obtain the angle positions in order to draw a circluar shape. Once these calculations are done, the results are pushed into an array as a vector. This is wrapped in a loop that continues until the set number of segments desired is reached.
+                            <br><br>
+                            <code>
+                                for(let i=0; i&#x3C;=numOfSeg; i++){<br>
+      let vx = cos(angle*i)*r;<br>
+      let vy = sin(angle*i)*r;<br>
+      vPoints.push(createVector(vx,vy));<br>
+    }
+                            </code>
                         </p>
                     </div>
                 </div>

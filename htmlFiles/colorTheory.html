@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -60,15 +60,33 @@
                 <div class="row whiteText">
                     <div class="col-md-12">
                         
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise05-ColorTheoryWheel/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
+                        <iframe src="../js/exercise-01-color-shape-AJDenton-master/Exercise05-ColorTheoryWheel/index.html" frameborder="0" scrolling="no" style="height: 500px; width: 800px;" height="100%" width="100%"></iframe>
                     </div></div>
                     <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
                         <p>This exercise involved creating an interactive color wheel that uses beginShape and endShape, push and pop and translation.
                             <br><br>
-                        I chose to make this a color wheel that could allow people to mix and match colors. I created two triangle fan shapes to do this.
+                        I chose to make this a color wheel that could allow people to mix and match colors. I created two triangle fan shapes to do this. The inner triangle fan uses rotations based on the  mouseY position. The outer circle uses rotations based on the mouseX positions.
+                            <br>
+                            The triangle fans are calculated using the radius multiplied by the cos of alpha, as well as the radius multiplied by the sin of alpha. The alpha in this case is defined within the condition of the for loop in which the shape is drawn. Until the alpha reaches 360, it will continue to add the stepAngle value to itself each time the loop has run.
                         <br><br>
+                            <code>push();<br>
+                              translate(250,250);<br>
+                              beginShape(TRIANGLE_FAN);<br>
+                              vertex(0,0);<br>
+                              rotate(mouseX);<br>
+                              noStroke();<br>
+                              for(let a=0; a&lt;=360; a+=stepAngle){<br>
+                              let vx = (r * cos(a)); //vx is radius multiplied by cos of alpha<br>
+                              let vy = (r * sin(a)); //vy is radius multiplied by sin of alpha<br>
+                              fill(a,100,100,100);<br>
+                              vertex(vx,vy); <br>
+                              // Vertex points changing according to the rCos(a) and rSin(a)
+                                }
+                        endShape();
+                        pop();</code><br>
+                            <br>
                         This was interactive by using rotations, as well as a series of sliders that can manipulate the hue, saturation, brightness and alpha of the inner triangle fan.
                         <br><br>
                         The alpha was made as a slider so that the user could blender colors together onscreen, adjust them to a tone that they could use.

@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,7 +46,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Lerp Rotation Composition</h1>
+                        <h1>Mouse Interactivity and keyPressed</h1>
                         <h3>Sep 2020</h3>
                     </div>
                 </div>
@@ -59,49 +59,51 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        
-                        <iframe src="js/exercise-01-color-shape-AJDenton-master/Exercise07-InterpolatedColorWheel/index.html" frameborder="0" scrolling="no" style="height: 800px; width: 800px;" height="100%" width="100%"></iframe>
+                       
+                        <iframe src="../js/exercise-01-color-shape-AJDenton-master/Exercise02-MouseInteractivityandkeyPressedFunction/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <h3>Description</h3>
-                        <p>This task was set in order to compose a piece using lerpColor. Interactivity was also required.
+                        <p>In this task, we used the mouseX and mouseY functions to allow the computer to read the location of the mouse on the canvas. This position is found by reading the X and Y axis. This composition relies on the position of mouseX and mouseY to determind the color drawn on the canvas.
+                        <br><br>
+                            
+                        <code>for(let gridY=0; gridY&lt;height; gridY=gridY+stepY){<br>
+                        for(let gridX=0; gridX&lt;width; gridX=gridX+stepX){<br>
+                        fill(mouseX, mouseY, 100);<br>
+                        rect(gridX, mouseY, 25, 25);<br> } }
+                        </code></p>
+                        
+                        
+                        <h3>Key Pressed Function</h3>
+                        <p>This function allows the user to interact with the canvas by pressing a button. The keyPressed() function is an event listener, which means that is continuously listens for an event to take place while the program is running. In this task, we used the keyPressed function to listen for the 's'/'S' key to be initialized on the keyboard. When this happens, the 'saveCanvas' function is initiated, which will save a capture of the canvas and download it to the PC.
                             <br><br>
-                            I chose to create a spiral that could have interactive colors, rotations and a stroke. The aim was so produce something that could showcase a vortex of growing colors. The end result became an interesting and fun composition that could be used to create mosaics and spirals.
-                            <br><br>
-                            Again, I used sliders in doing this task. I used these as an Interactivity option due to the ease of use that came with it. The sliders were applied to the start color and the end color, so that the user could play with different color spectrums. The sliders were also applied to the rotations of the shapes, stemming from the center of the canvas. Finally, the last slider controlled the stroke weight of the drawn shapes. This offered some interesting mosaic styled manipulations.
-                            <br><br>
-                            I used mapping in this task for the number of shapes on the canvas. These shapes were mapped to mouseY, so that as the cursor moves down the canvas, the number of shapes increase.
-                        </p>
+                        In this case, the saveCanvas function featured the 'gd.timestamp()' as the first parameter. This will export the image with a timestamp of the keyPressed function happening.</p>
                     </div>
-                    </div>
+                        
+                </div>
                 <div class="row whiteText">
                         <div class="col-md-12">
                             <h3>Example Outputs</h3>
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/1.png">
-                        <img src="mainImages/lerpRotation/1.png" width="600" height="600">
+                      <a target="_blank" href="../mainImages/MouseInteractivityandKeyPressed/1.png">
+                        <img src="../mainImages/MouseInteractivityandKeyPressed/1.png" width="600" height="600">
                       </a>
                     </div>
 
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/2.png">
-                        <img src="mainImages/lerpRotation/2.png" width="600" height="600">
+                      <a target="_blank" href="../mainImages/MouseInteractivityandKeyPressed/2.png">
+                        <img src="../mainImages/MouseInteractivityandKeyPressed/2.png" width="600" height="600">
                       </a>
                     </div>
                     <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/3.png">
-                        <img src="mainImages/lerpRotation/3.png" width="600" height="600">
-                      </a>
-                    </div>
-                    <div class="gallery">
-                      <a target="_blank" href="mainImages/lerpRotation/4.png">
-                        <img src="mainImages/lerpRotation/4.png" width="600" height="600">
+                      <a target="_blank" href="../mainImages/MouseInteractivityandKeyPressed/3.png">
+                        <img src="../mainImages/MouseInteractivityandKeyPressed/3.png" width="600" height="600">
                       </a>
                     </div>
                 </div>
             </div>
-        </div>
+            </div>
         </div>
     </main>
 
@@ -123,5 +125,5 @@
 
     </script>
     <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-    </body>
+
 </html>

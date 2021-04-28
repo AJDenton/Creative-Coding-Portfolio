@@ -34,7 +34,7 @@ function draw(){
   //radius
   r = 30;
   //NumOfShapes mapped to mouseY
-  numOfShapes = map(mouseX, 0, height, 10, 200);
+  numOfShapes = map(mouseX, 0, height, 10, 300);
   background(0);
 
   //INTERPOLATION COLORS

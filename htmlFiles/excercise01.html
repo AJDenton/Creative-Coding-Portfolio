@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,7 +46,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Understanding Atan2</h1>
+                        <h1>Triangle Fan Stroke</h1>
                         <h3>Oct 2020</h3>
                     </div>
                 </div>
@@ -59,14 +59,34 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/shape-pattern-AJDenton-master/Exercise03-Understandingatan/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+                        <iframe src="../js/shape-pattern-AJDenton-master/Exercise01/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>Like the Rotating Rectangle task, we used atan2 to create an interactive piece in which an object's rotations will be determined by the position of the cursor.
+                        <p>This task uses the triangle fan with only a stroke to create the pattern shown. It also uses mapping to increase and decrease the number of segments/lines as the mouse position moves along the x axis of the canvas.
                             <br><br>
-                            This exercise used ellipses, with smaller ones inside them to create a mesh-like movement.
+                            In creating this, the triangle fan uses Radians to define the total degrees of the circle, which is two pi. The stepAngle for the loop is defined as the radius divided by the number of lines. The number of lines are defined by mapping the value to the mouseX position on the canvas.
+                            <br><br>
+                            <code>
+                                  rad = TWO_PI;<br>
+  numOfLines = map(mouseX, 0, width, 10, 50);<br>
+  background(0);<br>
+  stepAngle = rad/numOfLines;<br>
+  lineSize = 100;<br>
+
+  stroke(360,0,100);<br>
+  strokeWeight(5);<br>
+
+for(let i=0; i&#x3C;=rad; i+= stepAngle){<br>
+  push();<br>
+  translate(width/2,height/2);<br>
+  rotate(i);<br>
+  line(0,0,lineSize,lineSize);<br>
+  pop();<br>
+  }<br>
+}<br>
+                            </code>
                         </p>
                     </div>
                 </div>

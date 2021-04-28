@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h2>Understanding Atan2 and Size</h2>
-                        <h3>Oct 2020</h3>
+                        <h2>Understanding Colour Modes and Loops</h2>
+                        <h3>Sep 2020</h3>
                     </div>
                 </div>
             </div>
@@ -59,22 +59,26 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/shape-pattern-AJDenton-master/Exercise04-UnderstandingatanandSize/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
-                    </div></div>
+                        
+                        <iframe src="../js/exercise-01-color-shape-AJDenton-master/Exercise01-ColorModesandLoops/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
+                    </div>
+                </div>
                 <div class="row whiteText">
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <h3>Description</h3>
-                        <p>This exercise taskes the same theory of using atan2 to rotate objects on the canvas, however there is size manipulation applied using the dist() function and the map() function.
-                        </p>
-                        <h3>Dist()</h3>
-                        <p>The dist function calculates the distance between two points on a canvas. In this example, it takes the parameters of the mouse position (mouseX and mouseY) as well as the transformation positions (transX and transY).
+                        <p>This task involved creating a grid using a set of for loops, each of which continuously creates a rect according to the positions of 'gridX' and 'gridY'. These rect's positions are also defined according to the stepX and stepY values.
                             <br><br>
-                            This will allow the distance between the mouse position and a specific shape to be measured, so that change can take place when the distance changes.
-                        </p>
-                        <h3>Mapping</h3>
-                        <p>The mapping function is used to re-map a number from one range to another. In this piece, mapping is used alongside dist() in order to manipulate the size of shapes as the dist() value reduces. In simple terms, as the mouse gets closer to an object, the object size will increase. As the mouse moves away from an object, the size decreases.
-                            <br><br>
-                            This was applied to each shape drawn in the canvas, each of wish has it's own transformation so that each origin point is different.
+                            <code>  let stepX = 25;<br>
+                                let stepY = 25;<br>
+                                for(let gridY=0; gridY&lt;height; gridY=gridY+stepY){<br>
+                                for(let gridX=0; gridX&lt;width; gridX=gridX+stepX){<br> 
+                                fill(gridX, gridY, 100);<br>
+                                rect(gridX, gridY, 25, 25); <br>
+                                } } </code><br><br>
+                        This sketch involves using the colorMode function, in which the HSB (Hue, Saturation, Brightness) colormode is applied. This is done in order to continously adjust the fill of the rects as they are created within the canvas.
+                        <br>
+                        <code>colorMode(HSB, width, height, 100);</code>
+                        
                         </p>
                     </div>
                 </div>
@@ -91,6 +95,7 @@
                 <a href="#">Back to top</a>
             </p>
             <p>Icons made by <a href="https://www.flaticon.com/authors/kiranshastry" title="Kiranshastry">Kiranshastry</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+        
         </div>
     </footer>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,7 +46,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Atan2 Random Composition</h1>
+                        <h1>Random Line Generation</h1>
                         <h3>Nov 2020</h3>
                     </div>
                 </div>
@@ -59,19 +59,41 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/shape-pattern-AJDenton-master/Exercise06-atan2Random()Composition/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+                        <iframe src="../js/shape-pattern-AJDenton-master/Exercise05-RandomLines/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>This exercise was done in order for the class to create individual pieces using random generation. My piece involved the same theory of random generation, however instead of lines, I chose to use arcs and ellipses. I also chose to adjust the radians of the arcs depending on the random number output.
+                        <p>This exercise introduces random generation each time the canvas is refreshed. This uses the random() function and the round() function with line shapes.
                         </p>
-                        <h3>Random</h3>
-                        <p>This piece uses an if else statement that determines a number between 0 and 3. In each output, an arc is drawn and set to a specific rotation and arc size. The arc uses the RADIANS angleMode, so this was used to calculate the degrees in which an arc is drawn.
+                        <h3>Random Function</h3>
+                        <p>The random() function takes two parameters. These two parameters determine the range of random numbers the function can output. For example; 
+          
+                        <br><br>
+                        This line of code, when run, will output a number between 0 and 5, however this is not limited to rounded numbers. The random function will output float values. This is why the round() function is used in this piece.
+                        <br><br>
+                        
+                        </p>
+                        <h3>Round Function</h3>
+                        <p>The round function is simply used to round a value up or down to a whole number. For example; 'let rand = round(random(0,5));'
                             <br><br>
-                            There are 4 possible outcomes to this random statement, the arc can face up, left, right or down. The arc can also be sized between QUARTER_PI and QUARTER_PI+PI.
+                            This line of code, when run, will output a whole number between 0 and 5, rather than a float value.
                             <br><br>
-                            This made for an interesting output that illustrates a circular-based visual that intends to flow seamlessly across the canvas.
+                            In this exercise, this code was used to determine which line shape should be drawn on as the loop draws shapes. However, in this case, it simply uses the range of 0 to 1. This means that if the value returned is 0, a line will be drawn from one corner to the other, and if the value is 1, the shape is reversed.
+                            <br><br>
+                            Each line is the same size, so the resulting image shows a randomly generated map-like visual.
+                            <br><br>
+                            <code>
+                        let rand = round(random(0,1));<br>
+                        if(rand == 0){<br>
+                        line(0,squareSize,squareSize,0);<br>
+                        } else{<br>
+                        line(0,0,squareSize,squareSize);<br>
+                        }<br>
+                        pop();<br>
+                        }<br>
+                        }<br>
+                        </code>
                         </p>
                     </div>
                 </div>

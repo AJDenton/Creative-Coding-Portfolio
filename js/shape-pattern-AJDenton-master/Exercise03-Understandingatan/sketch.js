@@ -1,10 +1,10 @@
 let cWidth = 600;
-let numOfSquares = 15;
-let squareSize = cWidth/numOfSquares;
+let numOfShapes = 15;
+let shapeSize = cWidth/numOfShapes;
 
 function setup(){
   createCanvas(cWidth, cWidth);
-  colorMode(RGB,numOfSquares,numOfSquares,numOfSquares);
+  colorMode(RGB,numOfShapes,numOfShapes,numOfShapes);
   rectMode(CENTER);
 
 }
@@ -12,13 +12,13 @@ function setup(){
 function draw() {
   background(0);
 
-for(let j = 0; j < numOfSquares; j++){
-  for(let i = 0; i < numOfSquares; i++){
-    let transX = i*squareSize+squareSize/2;
-    let transY = j*squareSize+squareSize/2;
+for(let j = 0; j < numOfShapes; j++){
+  for(let i = 0; i < numOfShapes; i++){
+    let transX = i*shapeSize+shapeSize/2;
+    let transY = j*shapeSize+shapeSize/2;
 
 
-    let col = color(i,numOfSquares-j,numOfSquares-j);
+    let col = color(i,numOfShapes-j,numOfShapes-j);
     push();
     translate(transX,transY);
 
@@ -28,10 +28,10 @@ for(let j = 0; j < numOfSquares; j++){
 
     noStroke();
     fill(col);
-    ellipse(0, 0, squareSize, squareSize);
+    ellipse(0, 0, shapeSize, shapeSize);
 
     fill(0);
-    ellipse(10,0,squareSize/4,squareSize/4);
+    ellipse(10,0,shapeSize/4,shapeSize/4);
     pop();
     }
   }

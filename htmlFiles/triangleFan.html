@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="../index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,8 +46,8 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Random Pattern and Colour</h1>
-                        <h3>Nov 2020</h3>
+                        <h1>Triangle Fan Colour Wheel</h1>
+                        <h3>Sep 2020</h3>
                     </div>
                 </div>
             </div>
@@ -59,12 +59,25 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/shape-pattern-AJDenton-master/Exercise07-RandomPattern/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
+                        
+                        <iframe src="../js/exercise-01-color-shape-AJDenton-master/Exercise03-ColorWheelTriangleFan/index.html" frameborder="0" scrolling="no" style="height: 600px; width: 600px;" height="100%" width="100%"></iframe>
                     </div></div>
                 <div class="row whiteText">
-                    <div class="col-md-12">
+                    <div class="col-md-12 ">
                         <h3>Description</h3>
-                        <p>This exercise uses the theory of random generation between lines and triangles. In doing so, there is experimentation on color theory and shading.
+                        <p>This exercise involved creating a color wheel using the 'beginShape' and 'endShape' functions. These allow for creating more complex shapes, such as polygons. In doing so, these functions include the use of vertex placement (vertex(x,y)) to pin point each joining point of the shape. the beginShape() starts the shape at a specified position according to the vertex x and y. The endShape() will allow the final vertex to join the beginning vertex, thus completing the shape and closing it.</p>
+
+                        <h3>BeginShape and EndShape Functions</h3>
+                        <p>In this task, we used the beginShape(TRIANGLE_FAN) parameter, which can allow for several triangular shapes to be created in a circular shape. The origin point is set to half the width and height of the canvas, 250,250. From then, we created a loop which calculates the rest of the vertices and adds them according to the stepAngle (*using vx = radius*cos(a) and vy = radius*sin(a)*) until the degrees of the triangle_fan have are less than/equal to 360.
+                            <br><br>
+                            <code>beginShape(TRIANGLE_FAN);<br> vertex(250,250);<br>
+                            for(let a=0; a&lt;=360; a+=stepAngle){<br>
+                            let vx = (r * cos(a)) + 250; let vy = (r * sin(a)) + 250;<br>
+                            fill(a,100,100);<br>
+                            vertex(vx,vy);<br>
+                            }<br>
+                            endShape();</code><br><br>
+                        The color is changed by setting the fill's parameters to (a,100,100). As the 'a' values continuously count upwards, this equates to the color constantly changing until the triangle_fan is complete.
                         </p>
                     </div>
                 </div>

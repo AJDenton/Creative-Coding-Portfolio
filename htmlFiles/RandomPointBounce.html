@@ -12,7 +12,7 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <style>
         .bd-placeholder-img {
@@ -32,13 +32,13 @@
 
     </style>
     <!-- Custom styles for this template -->
-    <link href="album.css" rel="stylesheet">
+    <link href="../album.css" rel="stylesheet">
 </head>
 
 <body>
     <!--NAVBAR-->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html"><img src="mainImages/home.png" height="50px" width="50px"> </a>
+        <a class="navbar-brand" href="index.html"><img src="../mainImages/home.png" height="50px" width="50px"> </a>
     </nav>
     <main role="main">
 
@@ -46,7 +46,7 @@
             <div class="container text-center">
                 <div class="row">
                     <div class="col-md-12">
-                        <h1>Curves Class</h1>
+                        <h1>Random Point Bounce</h1>
                         <h3>Feb 2020</h3>
                     </div>
                 </div>
@@ -59,18 +59,38 @@
 
                 <div class="row whiteText">
                     <div class="col-md-12">
-                        <iframe src="js/Semester2/curvesClass/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%"></iframe>
+                        <iframe src="../js/Semester2/RandomAgentPointBounce/index.html" frameborder="0" scrolling="no" style="height: 700px; width: 700px;" height="100%" width="100%" align="middle"></iframe>
                     </div></div>
                 <div class="row whiteText">
                     <div class="col-md-12">
                         <h3>Description</h3>
-                        <p>This task was set in order to compose a piece using lerpColor. Interactivity was also required.
-                            <br><br>
-                            I chose to create a spiral that could have interactive colors, rotations and a stroke. The aim was so produce something that could showcase a vortex of growing colors. The end result became an interesting and fun composition that could be used to create mosaics and spirals.
-                            <br><br>
-                            Again, I used sliders in doing this task. I used these as an Interactivity option due to the ease of use that came with it. The sliders were applied to the start color and the end color, so that the user could play with different color spectrums. The sliders were also applied to the rotations of the shapes, stemming from the center of the canvas. Finally, the last slider controlled the stroke weight of the drawn shapes. This offered some interesting mosaic styled manipulations.
-                            <br><br>
-                            I used mapping in this task for the number of shapes on the canvas. These shapes were mapped to mouseY, so that as the cursor moves down the canvas, the number of shapes increase.
+                        <p>This task involves using random angles that are controlled through if statements to detect specific canvas edges and bounce off depending on the edge.<br><br>
+                        This skecth uses an if statement to detech the x position and y position of the point on the canvas. If the x or y position returned is equal to the 0, or the width or height, the angle variable that the point moves changes.
+                        <br><br>
+                        <code>if (xPos &#x3C; 0 || xPos &#x3E; width || yPos &#x3C; 0 || yPos &#x3E; height) {<br>
+                        angle = getRandomAngle(xPos, yPos)<br>
+                        }</code><br><br>
+                        The angles are determined using a function called getRandomAngle(). This function returns the x and y position of the point. It also holds a series of if statements to determine the position of the point and apply a specific angle for the point to travel upon.
+                        <br><br>
+                        <code>
+                        function getRandomAngle(_x, _y) {<br>
+                            let randomAngle = (floor(random(-angleCount, angleCount)) + 0.5) * 90 / angleCount;<br>
+
+                            //console.log(randomAngle);<br>
+
+                            if (_y &#x3C; 0) {<br>
+                                return randomAngle<br>
+                            }<br>
+                            if (_y &#x3E; height) {<br>
+                                return randomAngle + 180;<br>
+                            }<br>
+                            if (_x &#x3E; width) {<br>
+                                return randomAngle + 90;<br>
+                            }<br>
+                            if (_x &#x3C; 0) {<br>
+                                return randomAngle + 270;<br>
+                            }<br>
+                        }</code>
                         </p>
                     </div>
                 </div>

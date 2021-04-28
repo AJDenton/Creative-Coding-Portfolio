@@ -1,7 +1,7 @@
 let cWidth = 700;
 let stepSize = 1;
 let vPoints = [];
-let numOfSeg = 5;
+let numOfSeg = 10;
 let r = 250;
 
 function setup() {
@@ -33,14 +33,16 @@ function drawPoints(){
       ellipse(vPoints[i].x, vPoints[i].y,10,10);
     }
 
-  //These
+  beginShape();
     for(let i = 0; i<vPoints.length - 1; i++){
       stroke(255);
       strokeWeight(2);
-      line(vPoints[i].x, vPoints[i].y, vPoints[i + 1].x, vPoints[i + 1].y);
+        noFill();
+      curveVertex(vPoints[i].x, vPoints[i].y);
     }
+    endShape();
 
-    line(vPoints[vPoints.length - 1].x, vPoints[vPoints.length - 1].y, vPoints[0].x, vPoints[0].y);
+    //line(vPoints[vPoints.length - 1].x, vPoints[vPoints.length - 1].y, vPoints[0].x, vPoints[0].y);
     //pop();
 }
 
